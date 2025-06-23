@@ -45,8 +45,8 @@ export WARNING="${RED}\e[5m"
 export UNDERLINE="\e[4m"
 
 # // Exporting URL Host
-export Server_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/test"
-export Server1_URL="raw.githubusercontent.com/NevermoreSSH/Blueblue/main/limit"
+export Server_URL="raw.githubusercontent.com/taoomatoa/Auto_scrip/main/test"
+export Server1_URL="raw.githubusercontent.com/taoomatoa/Auto_scrip/main/limit"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
@@ -142,7 +142,7 @@ mkdir -p /usr/local/etc/xray
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
 echo $host > /etc/xray/domain
-wget https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cf.sh && chmod +x cf.sh && ./cf.sh
 
 sleep 2
 
@@ -151,66 +151,66 @@ echo -e "$white\033[0;34m┌─────────────────�
 echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1
-wget https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cf.sh && chmod +x cf.sh && ./cf.sh
 #install jembot
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m           ⇱ Install Jembot ⇲            \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1 
-wget -q https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/jembot.sh && chmod +x jembot.sh && ./jembot.sh
+wget -q https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/jembot.sh && chmod +x jembot.sh && ./jembot.sh
 #install ssh-vpn
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m          ⇱ Install SSH / WS ⇲           \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1
-wget -q https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/ssh-vpn2.sh && chmod +x ssh-vpn2.sh && ./ssh-vpn2.sh
+wget -q https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/ssh-vpn2.sh && chmod +x ssh-vpn2.sh && ./ssh-vpn2.sh
 #install ins-xray
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m            ⇱ Install Xray ⇲             \E[0m$NC"
 echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
 sleep 1 
-wget -q https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wget -q https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget -q https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
+wget -q https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 
 # // Download Data
 echo -e "${GREEN}Download Data${NC}"
-wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/add-ws.sh"
-wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/add-ssws.sh"
-wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/add-socks.sh"
-wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/add-vless.sh"
-wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/add-tr.sh"
-wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/add-trgo.sh"
-wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/autoreboot.sh"
-wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/restart.sh"
-wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/tendang.sh"
-wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/clearlog.sh"
-wget -q -O /usr/bin/running "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/running.sh"
-wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/cek-trafik.sh"
-wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/speedtes_cli.py"
-wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/cek-bandwidth.sh"
-wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/ram.sh"
-wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/limit-speed.sh"
-wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-vless.sh"
-wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-vmess.sh"
-wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-socks.sh"
-wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-ss.sh"
-wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-trojan.sh"
-wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-trgo.sh"
-wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-ssh.sh"
-wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-bckp-telegram.sh"
-wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu-bckp-github.sh"
-wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/bckpbot.sh"
-wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/usernew.sh"
-# wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/menu4.sh"
-wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/webmin.sh"
-wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/xp.sh"
-wget -q -O /usr/bin/update "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/update.sh"
-wget -q -O /usr/bin/dns "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/dns.sh"
-wget -q -O /usr/bin/netf "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/netf.sh"
-wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/bbr.sh"
-#wget -q -O /usr/bin/del-xrays "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/del-xrays.sh"
-#wget -q -O /usr/bin/user-xrays "https://raw.githubusercontent.com/NevermoreSSH/Blueblue/main/user-xrays.sh"
+wget -q -O /usr/bin/add-ws "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/add-ws.sh"
+wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/add-ssws.sh"
+wget -q -O /usr/bin/add-socks "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/add-socks.sh"
+wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/add-vless.sh"
+wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/add-tr.sh"
+wget -q -O /usr/bin/add-trgo "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/add-trgo.sh"
+wget -q -O /usr/bin/autoreboot "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/autoreboot.sh"
+wget -q -O /usr/bin/restart "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/restart.sh"
+wget -q -O /usr/bin/tendang "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/tendang.sh"
+wget -q -O /usr/bin/clearlog "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/clearlog.sh"
+wget -q -O /usr/bin/running "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/running.sh"
+wget -q -O /usr/bin/cek-trafik "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cek-trafik.sh"
+wget -q -O /usr/bin/cek-speed "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/speedtes_cli.py"
+wget -q -O /usr/bin/cek-bandwidth "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cek-bandwidth.sh"
+wget -q -O /usr/bin/cek-ram "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/ram.sh"
+wget -q -O /usr/bin/limit-speed "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/limit-speed.sh"
+wget -q -O /usr/bin/menu-vless "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-vless.sh"
+wget -q -O /usr/bin/menu-vmess "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-vmess.sh"
+wget -q -O /usr/bin/menu-socks "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-socks.sh"
+wget -q -O /usr/bin/menu-ss "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-ss.sh"
+wget -q -O /usr/bin/menu-trojan "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-trojan.sh"
+wget -q -O /usr/bin/menu-trgo "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-trgo.sh"
+wget -q -O /usr/bin/menu-ssh "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-ssh.sh"
+wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-bckp-telegram.sh"
+wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-bckp-github.sh"
+wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/bckpbot.sh"
+wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/usernew.sh"
+# wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu4.sh"
+wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/webmin.sh"
+wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/xp.sh"
+wget -q -O /usr/bin/update "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/update.sh"
+wget -q -O /usr/bin/dns "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/dns.sh"
+wget -q -O /usr/bin/netf "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/netf.sh"
+wget -q -O /usr/bin/bbr "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/bbr.sh"
+#wget -q -O /usr/bin/del-xrays "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/del-xrays.sh"
+#wget -q -O /usr/bin/user-xrays "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/user-xrays.sh"
 chmod +x /usr/bin/add-ws
 chmod +x /usr/bin/add-ssws
 chmod +x /usr/bin/add-socks
