@@ -204,24 +204,33 @@ cpu_usage+="%"
 cname=$(awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo)
 cores=$(awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo)
 freq=$(awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo)
+
 clear
-echo -e "${BICyan} ┌────────────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UWhite}Server Informations${NC}"         
-echo -e "${BICyan} │"                                                                      
-echo -e "${BICyan} │  ${BICyan}OS Linux        :  "$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)  
-echo -e "${BICyan} │  ${BICyan}Kernel          :  ${BICyan}$(uname -r)${NC}"  
-echo -e "${BICyan} │  ${BICyan}CPU Name        : ${BIWhite}$cname${NC}"
-echo -e "${BICyan} │  ${BICyan}CPU Info        :  ${BIWhite}$cores Cores @ $freq MHz (${cpu_usage}) ${NC}"
-echo -e "${BICyan} │  ${BICyan}Total RAM       :  ${BIWhite}${ram_used}MB / ${total_ram}MB (${ram_usage}%) ${NC}" 
-echo -e "${BICyan} │  ${BICyan}System Uptime   :  ${BIWhite}$uptime${NC}"
-echo -e "${BICyan} │  ${BICyan}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}" 
-echo -e "${BICyan} │  ${BICyan}IP-VPS          :  ${BIWhite}$IPVPS${NC}"                  
-echo -e "${BICyan} │  ${BICyan}ISP-VPS         :  ${BIWhite}$ISPVPS${NC}"  
-echo -e "${BICyan} │  ${BICyan}Daily Bandwidth :  ${BIWhite}$daily_usage ${NC}"
-echo -e "${BICyan} │  ${BICyan}Total Bandwidth :  ${BIWhite}$monthly_usage ${NC}"
-echo -e "${BICyan} └────────────────────────────────────────────────────────────┘${NC}"
+echo -e " ${z}╭═══════════════════════════════════════════════════╮${NC}"
+echo -e " ${z}│$NC\033[41m  ${BOLD}              TUNNELING TAOOMATOA                $NC${z}│$NC"
+echo -e " ${z}╰═══════════════════════════════════════════════════╯${NC}"
+echo -e " ${z}╭═══════════════════════════════════════════════════╮${NC}"
+echo -e " ${z}│$NC$Blue ⇲ $NC OS ${NC}      :$NC "$(hostnamectl | grep "Operating System" | cut -d ' ' -f5-)  
+echo -e " ${z}│$NC$Blue ⇲ $NC RAM ${NC}     :$NC ${BIWhite}${ram_used}MB / ${total_ram}MB (${ram_usage}%) ${NC}" 
+echo -e " ${z}│$NC$Blue ⇲ $NC UPTIME ${NC}  :$NC ${BIWhite}$uptime${NC}"
+echo -e " ${z}│$NC$Blue ⇲ $NC CITY ${NC}    :$NC $(wget -qO- ipinfo.io/region)"
+echo -e " ${z}│$NC$Blue ⇲ $NC ISP VPS ${NC} :$NC ${BIWhite}$ISPVPS${NC}"  
+echo -e " ${z}│$NC$Blue ⇲ $NC IP ${NC}      :$NC$y ${BIWhite}$IPVPS${NC}"  
+echo -e " ${z}│$NC$Blue ⇲ $NC DOMAIN ${NC}  :$NC$y ${BIWhite}$(cat /etc/xray/domain)${NC}" 
+echo -e " ${z}│$NC$Blue ⇲ $NC Daily Bandwidth ${NC} :  ${BIWhite}$daily_usage ${NC}"
+echo -e " ${z}│$NC$Blue ⇲ $NC Total Bandwidth  ${NC}:  ${BIWhite}$monthly_usage ${NC}"
+echo -e " ${z}╰═══════════════════════════════════════════════════╯${NC}"
+echo -e " ${z} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+echo -e " ${z} $NC\033[0m ${BOLD}${White} SSH     VMESS     VLESS     TROJAN     SHADOWS$NC" 
+echo -e " ${z} $NC\033[0m ${y}  $ssh1        $vma         $vla          $tra          $ssa$NC"
+echo -e " ${z} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
+echo -e " ${z}╭═══════════════════════════════════════════════════╮${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "     		${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e " ${z}╰═══════════════════════════════════════════════════╯${NC}"
+echo -e " ${z}   ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
+echo -e " ${z}   │$NC  Version      ${NC} : $sem Last Update" 
+echo -e " ${z}   ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
 echo -e "${BICyan} ┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "     ${BICyan}[${BIWhite}01${BICyan}] SSHWS       ${WB}[${GB}${ssh}${WB}] ${BICyan}${BIYellow}${BICyan}${NC}" 
 echo -e "     ${BICyan}[${BIWhite}02${BICyan}] VMESS       ${WB}[${GB}${vmess}${WB}] ${BICyan}${BIYellow}${BICyan}${NC}"    
@@ -250,7 +259,7 @@ echo -e "     ${BICyan}[${BIWhite}88${BICyan}] RESTORE ${BICyan}${BIYellow}${BIC
 echo -e "     ${BICyan}[${BIWhite}x ${BICyan}] EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
 echo -e "${BICyan} └────────────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  Version      ${NC} : $sem Last Update"    
+echo -e " ${BICyan}│     
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
