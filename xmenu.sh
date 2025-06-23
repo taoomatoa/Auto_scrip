@@ -222,12 +222,11 @@ echo -e " ${z}│$NC$Blue ⇲ $NC Total Bandwidth  ${NC}:  ${BIWhite}$monthly_us
 echo -e " ${z}╰═══════════════════════════════════════════════════╯${NC}"
 echo -e " ${z} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e " ${z} $NC\033[0m ${BOLD}${White} SSH     VMESS     VLESS     TROJAN     SHADOWS$NC" 
-echo -e " ${z} $NC\033[0m ${y}  $ssh1        $vma         $vla          $tra          $ssa$NC"
+echo -e " ${z} $NC\033[0m ${y}  $ssh        $vmess         $vless          $tr          $ss$NC"
 echo -e " ${z} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
-echo -e " ${z}╭═══════════════════════════════════════════════════╮${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
 echo -e "     		${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
-echo -e " ${z}╰═══════════════════════════════════════════════════╯${NC}"
+echo -e " ${z} ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | lolcat
 echo -e " ${z}   ╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮${NC}"
 echo -e " ${z}   │$NC  Version      ${NC} : $sem Last Update" 
 echo -e " ${z}   ╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯${NC}"
