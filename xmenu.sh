@@ -257,9 +257,6 @@ echo -e "     ${BICyan}[${BIWhite}88${BICyan}] RESTORE ${BICyan}${BIYellow}${BIC
 #echo -e "     ${BICyan}[${BIWhite}99${BICyan}] INSTALL UDPCUSTOM ${BICyan}${BIYellow}${BICyan}${NC}" 
 echo -e "     ${BICyan}[${BIWhite}x ${BICyan}] EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
 echo -e "${BICyan} └────────────────────────────────────────────────────────────┘${NC}"
-echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│     
-echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
 echo -e ""
