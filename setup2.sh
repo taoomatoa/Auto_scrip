@@ -58,8 +58,8 @@ export VERSION="1.1"
 # // Exporint IP AddressInformation
 export IP=$( curl -s https://ipinfo.io/ip/ )
 
-# // Set Time To Kuala_Lumpur / GMT +8
-ln -fs /usr/share/zoneinfo/Asia/Kuala_Lumpur /etc/localtime
+# // Set Time To Asia/Jakarta / GMT +8
+ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 
 # // cek old script
 if [[ -r /etc/xray/domain ]]; then
