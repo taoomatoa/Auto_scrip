@@ -221,7 +221,7 @@ echo -e "${BICyan} │  ${BICyan}Daily Bandwidth :  ${BIWhite}$daily_usage ${NC}
 echo -e "${BICyan} │  ${BICyan}Total Bandwidth :  ${BIWhite}$monthly_usage ${NC}"
 echo -e "${BICyan} └────────────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
-echo -e "     			${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
+echo -e "     		${BICyan} DROPBEAR ${NC}: $resdbr" "${BICyan} SSH-WS ${NC}: $ressshws"
 echo -e "${BICyan} ┌────────────────────────────────────────────────────────────┐${NC}"
 echo -e "     ${BICyan}[${BIWhite}01${BICyan}] SSHWS       ${WB}[${GB}${ssh}${WB}] ${BICyan}${BIYellow}${BICyan}${NC}" 
 echo -e "     ${BICyan}[${BIWhite}02${BICyan}] VMESS       ${WB}[${GB}${vmess}${WB}] ${BICyan}${BIYellow}${BICyan}${NC}"    
@@ -229,15 +229,12 @@ echo -e "     ${BICyan}[${BIWhite}03${BICyan}] VLESS       ${WB}[${GB}${vless}${
 echo -e "     ${BICyan}[${BIWhite}04${BICyan}] TROJAN      ${WB}[${GB}${tr}${WB}] ${BICyan}${BIYellow}${BICyan}${NC}" 
 echo -e "     ${BICyan}[${BIWhite}05${BICyan}] SHADOWSOCKS ${WB}[${GB}${ss}${WB}] ${BICyan}${BIYellow}${BICyan}${NC}"   
 echo -e "" 
-echo -e "     ${BICyan}[${BIWhite}06${BICyan}] EXP FILES ${BICyan}${BIYellow}${BICyan}${NC}""    ${BICyan}[${BIWhite}11${BICyan}] ADD HOST/DOMAIN ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}07${BICyan}] AUTO REBOOT ${BICyan}${BIYellow}${BICyan}${NC}""    ${BICyan}[${BIWhite}12${BICyan}] RENEW CERT ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}08${BICyan}] REBOOT ${BICyan}${BIYellow}${BICyan}${NC}""    ${BICyan}[${BIWhite}12${BICyan}] RENEW CERT ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}09${BICyan}] RESTART ${BICyan}${BIYellow}${BICyan}${NC}""    ${BICyan}[${BIWhite}13${BICyan}] EDIT BANNER ${BICyan}${BIYellow}${BICyan}${NC}" 
-#echo -e "     ${BICyan}[${BIWhite}10${BICyan}] BACKUP/RESTORE ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e ""
-echo -e "     ${BICyan}[${BIWhite}13${BICyan}] EDIT BANNER ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}14${BICyan}] RUNNING STATUS ${BICyan}${BIYellow}${BICyan}${NC}" 
-echo -e "     ${BICyan}[${BIWhite}15${BICyan}] USER BANDWIDTH ${BICyan}${BIYellow}${BICyan}${NC}" 
+echo -e "     ${BICyan}[${BIWhite}06${BICyan}] EXP FILES ${BICyan}${BIYellow}${BICyan}${NC}	${z} | ${BICyan}[${BIWhite}11${BICyan}] ADD HOST/DOMAIN ${BICyan}${BIYellow}${BICyan}${NC}" 
+echo -e "     ${BICyan}[${BIWhite}07${BICyan}] AUTO REBOOT ${BICyan}${BIYellow}${BICyan}${NC}	${z} | ${BICyan}[${BIWhite}12${BICyan}] RENEW CERT ${BICyan}${BIYellow}${BICyan}${NC}"
+echo -e "     ${BICyan}[${BIWhite}08${BICyan}] REBOOT ${BICyan}${BIYellow}${BICyan}${NC}	${z} | ${BICyan}[${BIWhite}13${BICyan}] EDIT BANNER ${BICyan}${BIYellow}${BICyan}${NC}"  
+echo -e "     ${BICyan}[${BIWhite}09${BICyan}] RESTART ${BICyan}${BIYellow}${BICyan}${NC}	${z} | ${BICyan}[${BIWhite}14${BICyan}] RUNNING STATUS ${BICyan}${BIYellow}${BICyan}${NC}" 
+echo -e "     ${BICyan}[${BIWhite}10${BICyan}] BACKUP ${BICyan}${BIYellow}${BICyan}${NC}	${z} | ${BICyan}[${BIWhite}15${BICyan}] USER BANDWIDTH ${BICyan}${BIYellow}${BICyan}${NC}" 
+echo -e ""  
 echo -e "     ${BICyan}[${BIWhite}16${BICyan}] SPEEDTEST ${BICyan}${BIYellow}${BICyan}${NC}"
 echo -e "     ${BICyan}[${BIWhite}17${BICyan}] CHECK BANDWIDTH ${BICyan}${BIYellow}${BICyan}${NC}"
 echo -e "     ${BICyan}[${BIWhite}18${BICyan}] LIMIT SPEED ${BICyan}${BIYellow}${BICyan}${NC}"
@@ -254,8 +251,8 @@ echo -e " "
 echo -e "     ${BICyan}[${BIWhite}55${BICyan}] XRAY-CORE MENU ${BICyan}${BIYellow}${BICyan}${NC}"
 echo -e "     ${BICyan}[${BIWhite}66${BICyan}] INSTALL BBRPLUS ${BICyan}${BIYellow}${BICyan}${NC}"
 echo -e "     ${BICyan}[${BIWhite}77${BICyan}] SWAPRAM MENU ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}88${BICyan}] BACKUP ${BICyan}${BIYellow}${BICyan}${NC}"
-echo -e "     ${BICyan}[${BIWhite}99${BICyan}] RESTORE ${BICyan}${BIYellow}${BICyan}${NC}"
+echo -e ""  
+echo -e "     ${BICyan}[${BIWhite}88${BICyan}] RESTORE ${BICyan}${BIYellow}${BICyan}${NC}"
 #echo -e "     ${BICyan}[${BIWhite}88${BICyan}] INSTALL SLOWDNS ${BICyan}${BIYellow}${BICyan}${NC}"
 #echo -e "     ${BICyan}[${BIWhite}99${BICyan}] INSTALL UDPCUSTOM ${BICyan}${BIYellow}${BICyan}${NC}" 
 echo -e "     ${BICyan}[${BIWhite}x ${BICyan}] EXIT ${BICyan}${BIYellow}${BICyan}${NC}"  
@@ -276,7 +273,7 @@ case $opt in
 7) clear ; autoreboot ;;
 8) clear ; reboot ;;
 9) clear ; restart ;;
-#10) clear ; menu-bckp ;;
+10) clear ; backup ;;
 11) clear ; addhost ;;
 12) clear ; genssl ;;
 13) clear ; nano /etc/issue.net ;;
@@ -295,8 +292,7 @@ case $opt in
 55) clear ; wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/NevermoreSSH/Xcore-custompath/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger ;;
 66) clear ; bbr ;;
 77) clear ; wget -q -O /usr/bin/swapram "https://raw.githubusercontent.com/NevermoreSSH/swapram/main/swapram.sh" && chmod +x /usr/bin/swapram && swapram ;;
-88) clear ; backup ;;
-99) clear ; restore ;;
+88) clear ; restore ;;
 #88) clear ; wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main2/addons/dns2.sh && chmod +x dns2.sh && ./dns2.sh ;;
 #99) clear ; wget https://raw.githubusercontent.com/NevermoreSSH/Vergil/main/Tunnel/udp.sh && bash udp.sh ;;
 #22) clear ; wget https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cf.sh && chmod +x cf.sh && ./cf.sh ;;
