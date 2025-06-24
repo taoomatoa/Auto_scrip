@@ -146,10 +146,8 @@ mkdir -p /usr/local/etc/xray
 mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
 echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
 echo $host > /etc/xray/domain
-wget https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cf.sh && chmod +x cf.sh && ./cf.sh
 
 sleep 2
-
 #install jembot
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
@@ -205,7 +203,6 @@ wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/taoomatoa/Auto_
 wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu-bckp-github.sh"
 wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/bckpbot.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/usernew.sh"
-# wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu.sh"
 wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/xmenu.sh"
 wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/webmin.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/xp.sh"
@@ -350,7 +347,7 @@ echo "1.1" >> /home/.ver
 rm -fr /root/limit
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "====================-[ NevermoreSSH TUNNELING ]-===================="
+echo "====================-[ TAOOMATOA TUNNELING ]-===================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
