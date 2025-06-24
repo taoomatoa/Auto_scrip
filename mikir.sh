@@ -5,6 +5,7 @@ if [ "${EUID}" -ne 0 ]; then
 		echo -e "${EROR} Please Run This Script As Root User !"
 		exit 1
 fi
+clear
 # // Exporting Language to UTF-8
 export LANG='en_US.UTF-8'
 export LANGUAGE='en_US.UTF-8'
