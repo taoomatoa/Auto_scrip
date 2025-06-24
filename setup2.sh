@@ -202,7 +202,7 @@ wget -q -O /usr/bin/menu-bckp "https://raw.githubusercontent.com/taoomatoa/Auto_
 wget -q -O /usr/bin/bckp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/bckpbot.sh"
 wget -q -O /usr/bin/usernew "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/usernew.sh"
 # wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu.sh"
-wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/menu4.sh"
+wget -q -O /usr/bin/menu "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/xmenu.sh"
 wget -q -O /usr/bin/wbm "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/webmin.sh"
 wget -q -O /usr/bin/xp "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/xp.sh"
 wget -q -O /usr/bin/update "https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/update.sh"
