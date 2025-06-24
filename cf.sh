@@ -8,12 +8,11 @@ MYIP=$(curl -sS ifconfig.me )
 #MYIP=$(wget -qO- https://ipv6.icanhazip.com);
 clear
 apt install jq curl -y
-# sub=$(</dev/urandom tr -dc a-z | head -c4)
-sub=$(premium)
-DOMAIN=nevermoressh.me
-SUB_DOMAIN=${sub}.nevermoressh.me
-CF_ID=elliez667@gmail.com
-CF_KEY=565df838cbdf80722e12eb5b1d7186143b74e
+sub=$(</dev/urandom tr -dc a-z | head -c4)
+DOMAIN=taoomatoa.cloud
+SUB_DOMAIN=${sub}.taoomatoa.cloud
+CF_ID=angklingdarmo09@gmail.com
+CF_KEY=0ae3f333a1f7cacfe3b9c419e6c09e8e09e38
 set -euo pipefail
 IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
