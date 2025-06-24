@@ -118,6 +118,98 @@ apt dist-upgrade -y
 clear
 clear && clear && clear
 clear;clear;clear
+sleep 2
+echo -e " ${z}╭══════════════════════════════════════════════════════════╮${NC}"
+echo -e " ${z}│$NC [${r}1${NC}]$purple Gunakan Domain Pribadi ${NC}"
+echo -e " ${z}│$NC [${r}2${NC}]$purple Gunakan Domain Random Sistem ${NC}"
+echo -e " ${z}╰══════════════════════════════════════════════════════════╯${NC}"
+echo ""
+read -p "$( echo -e "${GREEN}  Input Your Choose ? ${NC}(${YELLOW}1/2${NC})${NC} " )" choose_domain
+if [[ $choose_domain == "2" ]]; then # // Using Automatic Domain
+mkdir -p /usr/bin
+rm -fr /usr/local/bin/xray
+rm -fr /usr/local/bin/stunnel
+rm -fr /usr/local/bin/stunnel5
+rm -fr /etc/nginx
+rm -fr /var/lib/scrz-prem/
+rm -fr /usr/bin/xray
+rm -fr /etc/xray
+rm -fr /usr/local/etc/xray
+mkdir -p /etc/nginx
+mkdir -p /var/lib/scrz-prem/
+mkdir -p /usr/bin/xray
+mkdir -p /etc/xray
+mkdir -p /usr/local/etc/xray
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+DOMAIN=darmovps.my.id
+SUB_DOMAIN=${sub}.darmovps.my.id
+CF_ID=angklingdarmo09@gmail.com
+CF_KEY=0ae3f333a1f7cacfe3b9c419e6c09e8e09e38
+set -euo pipefail
+IP=$(curl -sS ifconfig.me);
+echo "Updating DNS for ${SUB_DOMAIN}..."
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" | jq -r .result[0].id)
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" | jq -r .result[0].id)
+if [[ "${#RECORD}" -le 10 ]]; then
+RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" \
+--data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+fi
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" \
+--data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
+echo "Host : $SUB_DOMAIN"
+echo $SUB_DOMAIN > /root/domain
+echo "IP=$SUB_DOMAIN" > /var/lib/scrz-prem/ipvps.conf
+sleep 1
+yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
+yellow "Domain added.."
+sleep 3
+domain=$(cat /root/domain)
+cp -r /root/domain /etc/xray/domain
+clear
+echo -e "[ ${GREEN}INFO${NC} ] Starting renew cert... "
+sleep 2
+echo -e "${OKEY} Starting Generating Certificate"
+rm -fr /root/.acme.sh
+mkdir -p /root/.acme.sh
+curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
+chmod +x /root/.acme.sh/acme.sh
+/root/.acme.sh/acme.sh --upgrade
+/root/.acme.sh/acme.sh --upgrade --auto-upgrade
+/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
+~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+echo -e "${OKEY} Your Domain : $domain"
+sleep 2
+elif [[ $choose_domain == "1" ]]; then
+clear
+clear && clear && clear
+clear;clear;clear
+echo -e "${GREEN}Indonesian Language${NC}"
+echo -e "${YELLOW}-----------------------------------------------------${NC}"
+echo -e "Silakan Pointing Domain Anda Ke IP VPS"
+echo -e "Untuk Caranya Arahkan NS Domain Ke Cloudflare"
+echo -e "Kemudian Tambahkan A Record Dengan IP VPS"
+echo -e "${YELLOW}-----------------------------------------------------${NC}"
+echo ""
+echo ""
+read -p "Input Your Domain : " domain
+if [[ $domain == "" ]]; then
+clear
+echo -e "${EROR} No Input Detected !"
+exit 1
+fi
 
 # // Folder Sistem Yang Tidak Boleh Di Hapus
 mkdir -p /usr/bin
@@ -139,17 +231,32 @@ mkdir -p /usr/local/etc/xray
 
 #rm -fr /etc/xray/domain
 # // String / Request Data
-mkdir -p /var/lib/scrz-prem >/dev/null 2>&1
-echo "IP=$host" >> /var/lib/scrz-prem/ipvps.conf
-echo $host > /etc/xray/domain
-
+echo "$domain" > /etc/${Auther}/domain.txt
+echo "IP=$domain" > /var/lib/scrz-prem/ipvps.conf
+echo "$domain" > /root/domain
+domain=$(cat /root/domain)
+cp -r /root/domain /etc/xray/domain
+clear
+echo -e "[ ${GREEN}INFO${NC} ] Starting renew cert... "
 sleep 2
-#install jembot
-echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
-echo -e "                          ⇱ INSTALL DOMAIN ⇲            "
-echo -e "$white\033[0;34m└─────────────────────────────────────────┘${NC}"
-sleep 1
-wget https://raw.githubusercontent.com/taoomatoa/Auto_scrip/main/cf.sh && chmod +x cf.sh && ./cf.sh
+echo -e "${OKEY} Starting Generating Certificate"
+rm -fr /root/.acme.sh
+mkdir -p /root/.acme.sh
+curl https://acme-install.netlify.app/acme.sh -o /root/.acme.sh/acme.sh
+chmod +x /root/.acme.sh/acme.sh
+/root/.acme.sh/acme.sh --upgrade
+/root/.acme.sh/acme.sh --upgrade --auto-upgrade
+/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
+/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
+~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
+echo -e "${OKEY} Your Domain : $domain"
+sleep 2
+else
+echo -e "${EROR} Please Choose 1 & 2 Only !"
+exit 1
+fi
+clear
+sleep 2
 #install jembot
 echo -e "$white\033[0;34m┌─────────────────────────────────────────┐${NC}"
 echo -e " \E[41;1;39m           ⇱ Install Jembot ⇲            \E[0m$NC"
@@ -387,7 +494,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script Mod By NEVERMORESSH TUNNELING ]-==============="
+echo "===============-[ Script Mod By TAOOMATOA TUNNELING ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
